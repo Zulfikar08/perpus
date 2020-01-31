@@ -11,18 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ListController@index');
+Route::get('/create', 'ListController@create');
+Route::get('/{book}', 'ListController@show');
+Route::post('/', 'ListController@store');
+Route::delete('/{book}', 'ListController@destroy');
+Route::get('/{book}/edit', 'ListController@edit');
+Route::patch('/{book}', 'ListController@update');
+// Route::resource('/', 'ListController');
 
-Route::get('/belajar', function () {
-    return view('belajar');
-});
-
-Route::get('/zulfikar', function () {
-    return view('zulfikar');
-});
-
-Route::get('/about', function () {
-    return view('about');
-});
+Route::get('/pinjaman', 'PagesController@pinjaman');
