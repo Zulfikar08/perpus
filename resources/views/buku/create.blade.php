@@ -11,7 +11,7 @@
                 <h3 class="mt-3">Tambah data</h3>
             </u>
 
-            <form method="POST" action="/">
+            <form method="POST" action="/daftar">
                 @csrf
                 <div class="form-group">
                     <label for="judul_buku">Judul buku</label>
@@ -21,9 +21,9 @@
                     @enderror
                 </div>
                 <div class="form-group">
-                    <label for="no_induk">No induk buku</label>
-                    <input type="text" class="form-control @error ('no_induk') is-invalid @enderror" id="no_induk" name="no_induk" placeholder="Masukan No induk buku" value="{{ old('no_induk') }}">
-                    @error('no_induk')
+                    <label for="isbn">No isbn</label>
+                    <input type="text" class="form-control @error ('isbn') is-invalid @enderror" id="isbn" name="isbn" placeholder="Masukan No induk buku" value="{{ old('isbn') }}">
+                    @error('isbn')
                     <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
@@ -48,7 +48,8 @@
                     <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
-                <button type="submit" class="btn btn-sm btn-primary float-right">Tambahkan!</button>
+                <a href="/daftar" class="btn btn-sm btn-primary float-left">Back!</a>
+                <button type="submit" class="btn btn-sm btn-success float-right">Tambahkan!</button>
             </form>
 
         </div>

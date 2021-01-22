@@ -14,6 +14,7 @@
     <style>
         html,
         body {
+            background: linear-gradient(-45deg, #EE7732, #E73CE7, #42d1f5, #32D5AB);
             color: #fff;
             font-family: 'Nunito', sans-serif;
             font-weight: 200;
@@ -46,17 +47,13 @@
         }
 
         .title {
-            color: #ffa236;
+            color: #fff;
             font-size: 84px;
-        }
-
-        .title:hover {
-            transition: 0.6s;
-            transform: translate3d(40deg);
+            border: 3px solid #fff;
         }
 
         .links>a {
-            color: #ffa236;
+            color: #fff;
             padding: 0 25px;
             font-size: 13px;
             font-weight: 600;
@@ -95,9 +92,9 @@
             </div>
 
             <div class="links">
-                <a class="link" href="#">Menu Pinjaman</a>
-                <a class="link" href="#">Menu Utama</a>
-                <a class="link" href="#">Daftar Pinjaman</a>
+                <a data-text="text" class="link" href="/pinjaman/create">Pinjam Buku</a>
+                <a data-text="text" class="link" href="/daftar">Daftar Buku</a>
+                <a data-text="text" class="link" href="#">Daftar Pinjaman</a>
             </div>
         </div>
     </div>

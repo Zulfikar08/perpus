@@ -18,8 +18,8 @@
                         <td><b>:</b> {{ $book->judul_buku }}</td>
                     </tr>
                     <tr>
-                        <th scope="row">No induk</th>
-                        <td><b>:</b> {{ $book->no_induk }}</td>
+                        <th scope="row">No isbn</th>
+                        <td><b>:</b> {{ $book->isbn }}</td>
                     </tr>
                     <tr>
                         <th scope="row">Pengarang</th>
@@ -35,14 +35,14 @@
                     </tr>
                 </tbody>
             </table>
-            <a href="/" class="btn btn-sm btn-primary">kembali</a>
+            <a href="/daftar" class="btn btn-sm btn-primary">kembali</a>
 
-            <form action="{{ $book->id }}" method="POST">
+            <form action="{{ $book->id }}" method="POST" class="float-right">
                 @method('delete')
                 @csrf
-                <button type="submit" class="btn btn-sm float-right btn-danger">hapus</button>
+                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Yakin?');">hapus</button>
+                <a href="{{ $book->id }}/edit" class="btn btn-sm btn-success mx-2">edit</a>
             </form>
-            <a href="{{ $book->id }}/edit" class="btn btn-sm float-right btn-success mx-2">edit</a>
         </div>
     </div>
 </div>

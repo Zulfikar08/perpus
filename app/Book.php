@@ -9,5 +9,5 @@ class Book extends Model
 {
     use SoftDeletes;
     //
-    protected $fillable = ['judul_buku', 'no_induk', 'pengarang', 'penerbit', 'jenis_buku'];
+    protected $fillable = ['judul_buku', 'isbn', 'pengarang', 'penerbit', 'jenis_buku'];
 }

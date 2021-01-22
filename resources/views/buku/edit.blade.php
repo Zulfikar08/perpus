@@ -11,7 +11,7 @@
                 <h3 class="mt-3">Edit data</h3>
             </u>
 
-            <form method="POST" action="/{{ $book->id }}">
+            <form method="POST" action="/daftar/{{ $book->id }}">
                 @method('patch')
                 @csrf
                 <div class="form-group">
@@ -22,9 +22,9 @@
                     @enderror
                 </div>
                 <div class="form-group">
-                    <label for="no_induk">No induk buku</label>
-                    <input type="text" class="form-control @error ('no_induk') is-invalid @enderror" id="no_induk" name="no_induk" placeholder="Masukan No induk buku" value="{{ $book->no_induk }}">
-                    @error('no_induk')
+                    <label for="isbn">No isbn</label>
+                    <input type="text" class="form-control @error ('isbn') is-invalid @enderror" id="isbn" name="isbn" placeholder="Masukan No induk buku" value="{{ $book->isbn }}">
+                    @error('isbn')
                     <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
